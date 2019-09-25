@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC2875B3233B564800DE720B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B2233B564800DE720B /* AppDelegate.swift */; };
-		DC2875B5233B564800DE720B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B4233B564800DE720B /* ViewController.swift */; };
+		DC2875B5233B564800DE720B /* PrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B4233B564800DE720B /* PrepareViewController.swift */; };
 		DC2875B8233B564800DE720B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B6233B564800DE720B /* Main.storyboard */; };
 		DC2875BA233B564B00DE720B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B9233B564B00DE720B /* Assets.xcassets */; };
 		DC2875BD233B564C00DE720B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875BB233B564C00DE720B /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		DC2875AF233B564800DE720B /* Play Brydge AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Brydge AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2875B2233B564800DE720B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC2875B4233B564800DE720B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC2875B4233B564800DE720B /* PrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareViewController.swift; sourceTree = "<group>"; };
 		DC2875B7233B564800DE720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC2875B9233B564B00DE720B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2875BC233B564C00DE720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,46 @@
 		DC2875B1233B564800DE720B /* Play Brydge AI */ = {
 			isa = PBXGroup;
 			children = (
-				DC2875B2233B564800DE720B /* AppDelegate.swift */,
-				DC2875B4233B564800DE720B /* ViewController.swift */,
-				DC2875B6233B564800DE720B /* Main.storyboard */,
+				DC2875C4233B5D2B00DE720B /* Model */,
+				DC2875C5233B5D3500DE720B /* View */,
+				DC2875C6233B5D3F00DE720B /* Controler */,
+				DC2875C7233B5D8000DE720B /* Supporting Files */,
 				DC2875B9233B564B00DE720B /* Assets.xcassets */,
-				DC2875BB233B564C00DE720B /* LaunchScreen.storyboard */,
-				DC2875BE233B564C00DE720B /* Info.plist */,
 			);
 			path = "Play Brydge AI";
+			sourceTree = "<group>";
+		};
+		DC2875C4233B5D2B00DE720B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DC2875C5233B5D3500DE720B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC2875BB233B564C00DE720B /* LaunchScreen.storyboard */,
+				DC2875B6233B564800DE720B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DC2875C6233B5D3F00DE720B /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				DC2875B2233B564800DE720B /* AppDelegate.swift */,
+				DC2875B4233B564800DE720B /* PrepareViewController.swift */,
+			);
+			name = Controler;
+			sourceTree = "<group>";
+		};
+		DC2875C7233B5D8000DE720B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC2875BE233B564C00DE720B /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2875B5233B564800DE720B /* ViewController.swift in Sources */,
+				DC2875B5233B564800DE720B /* PrepareViewController.swift in Sources */,
 				DC2875B3233B564800DE720B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipDabkowski.Play-Brydge-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipDabkowski.Play-Brydge-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
