@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DC2875B3233B564800DE720B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B2233B564800DE720B /* AppDelegate.swift */; };
-		DC2875B5233B564800DE720B /* PrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B4233B564800DE720B /* PrepareViewController.swift */; };
+		DC2875B5233B564800DE720B /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875B4233B564800DE720B /* ColorsViewController.swift */; };
 		DC2875B8233B564800DE720B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B6233B564800DE720B /* Main.storyboard */; };
 		DC2875BA233B564B00DE720B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B9233B564B00DE720B /* Assets.xcassets */; };
 		DC2875BD233B564C00DE720B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875BB233B564C00DE720B /* LaunchScreen.storyboard */; };
-		DC2875C9233C7D0800DE720B /* EnterCustomCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */; };
+		DC2875C9233C7D0800DE720B /* EnterCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875C8233C7D0800DE720B /* EnterCardsViewController.swift */; };
+		DC2875CB233D36AC00DE720B /* SuitsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875CA233D36AC00DE720B /* SuitsDataBase.swift */; };
+		DC2875CD233D3CED00DE720B /* CardsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875CC233D3CED00DE720B /* CardsDataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC2875AF233B564800DE720B /* Play Brydge AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Brydge AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2875B2233B564800DE720B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC2875B4233B564800DE720B /* PrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareViewController.swift; sourceTree = "<group>"; };
+		DC2875B4233B564800DE720B /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		DC2875B7233B564800DE720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC2875B9233B564B00DE720B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2875BC233B564C00DE720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC2875BE233B564C00DE720B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCustomCardsViewController.swift; sourceTree = "<group>"; };
+		DC2875C8233C7D0800DE720B /* EnterCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCardsViewController.swift; sourceTree = "<group>"; };
+		DC2875CA233D36AC00DE720B /* SuitsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitsDataBase.swift; sourceTree = "<group>"; };
+		DC2875CC233D3CED00DE720B /* CardsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		DC2875C4233B5D2B00DE720B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DC2875CA233D36AC00DE720B /* SuitsDataBase.swift */,
+				DC2875CC233D3CED00DE720B /* CardsDataBase.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -85,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				DC2875B2233B564800DE720B /* AppDelegate.swift */,
-				DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */,
-				DC2875B4233B564800DE720B /* PrepareViewController.swift */,
+				DC2875C8233C7D0800DE720B /* EnterCardsViewController.swift */,
+				DC2875B4233B564800DE720B /* ColorsViewController.swift */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -170,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2875C9233C7D0800DE720B /* EnterCustomCardsViewController.swift in Sources */,
-				DC2875B5233B564800DE720B /* PrepareViewController.swift in Sources */,
+				DC2875C9233C7D0800DE720B /* EnterCardsViewController.swift in Sources */,
+				DC2875B5233B564800DE720B /* ColorsViewController.swift in Sources */,
+				DC2875CD233D3CED00DE720B /* CardsDataBase.swift in Sources */,
+				DC2875CB233D36AC00DE720B /* SuitsDataBase.swift in Sources */,
 				DC2875B3233B564800DE720B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
