@@ -12,6 +12,7 @@
 		DC2875B8233B564800DE720B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B6233B564800DE720B /* Main.storyboard */; };
 		DC2875BA233B564B00DE720B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2875B9233B564B00DE720B /* Assets.xcassets */; };
 		DC2875BD233B564C00DE720B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2875BB233B564C00DE720B /* LaunchScreen.storyboard */; };
+		DC2875C9233C7D0800DE720B /* EnterCustomCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DC2875B9233B564B00DE720B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2875BC233B564C00DE720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC2875BE233B564C00DE720B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCustomCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DC2875B2233B564800DE720B /* AppDelegate.swift */,
+				DC2875C8233C7D0800DE720B /* EnterCustomCardsViewController.swift */,
 				DC2875B4233B564800DE720B /* PrepareViewController.swift */,
 			);
 			name = Controler;
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2875C9233C7D0800DE720B /* EnterCustomCardsViewController.swift in Sources */,
 				DC2875B5233B564800DE720B /* PrepareViewController.swift in Sources */,
 				DC2875B3233B564800DE720B /* AppDelegate.swift in Sources */,
 			);

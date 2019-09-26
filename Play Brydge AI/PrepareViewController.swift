@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func ColorButtons(_ sender: UIButton) {
-        print("\(colorsArray[sender.tag - 1]) were clicked!")
+        
     }
 
     
