@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CanReceive {
     
     @IBOutlet weak var InfoLabel: UILabel!
     @IBOutlet weak var HeartsCardsLabel: UILabel!
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func SuitButtons(_ sender: UIButton) {
@@ -34,19 +34,39 @@ class ViewController: UIViewController {
             EnterCardsVC.suitData = "Spades"
         case "enterYourDiamonds":
             EnterCardsVC.suitData = "Diamonds"
-        case "enterYourClubs":
-            EnterCardsVC.suitData = "Clubs"
         default:
-            print("Hiuston we have a problem!")
+            EnterCardsVC.suitData = "Clubs"
+        }
+        EnterCardsVC.delegate = self
+    }
+    
+    func fillSuitLabel(color: String) {
+        var text = ""
+        for cardValue in cardsDB[color]! {
+                text += "\(cardValue) "
+        }
+        switch color {
+        case "Hearts":
+            HeartsCardsLabel.text = text
+        case "Spades":
+            SpadesCardsLabel.text = text
+        case "Diamonds":
+            DiamondsCardsLabel.text = text
+        default:
+            ClubsCardsLabel.text = text
         }
     }
     
+    func dataReceive(data: String) {
+        switch myCards.count {
+        case 0:
+            InfoLabel.text = "Nie wpisałeś jeszcze żednej karty!"
+        case 13:
+            InfoLabel.text = "Gotowe!"
+        default:
+            InfoLabel.text = "To dopiero \(myCards.count) zostało jeszcze \(13 - myCards.count)"
+        }
+        fillSuitLabel(color: data)
+    }
     
 }
-
-/*
- if segue.identifier == "enterYourClubs" {
- let EnterCardsVC = segue.destination as! EnterCardsViewController
- EnterCardsVC.data = "Clubs"
- }
- */

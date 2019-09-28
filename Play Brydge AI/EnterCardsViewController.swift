@@ -8,8 +8,12 @@
 
 import UIKit
 
+protocol CanReceive {
+    func dataReceive(data: String)
+}
+
 class EnterCardsViewController: UIViewController {
-    @IBOutlet weak var escView: UIView!
+    @IBOutlet weak var escButton: UIView!
     @IBOutlet weak var suitLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
@@ -27,31 +31,34 @@ class EnterCardsViewController: UIViewController {
     @IBOutlet weak var card12Button: UIButton!
     @IBOutlet weak var card13Button: UIButton!
     
+    var delegate : CanReceive?
+    
     var suitData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        escView.layer.cornerRadius = 20
+        escButton.layer.cornerRadius = 25
         suitLabel.text = suitsDB[suitData]!["view"]
         infoLabel.text = "Podaj \(suitsDB[suitData]!["pl"]!)"
-        
-        changeCardApperance()
-    }
-    
-    func changeCardApperance() {
-        
     }
     
     @IBAction func escButton(_ sender: Any) {
+        myCards = cardsDB["Hearts"]! + cardsDB["Spades"]! + cardsDB["Diamonds"]! + cardsDB["Clubs"]!
+        delegate?.dataReceive(data: suitData)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cardsBotton(_ sender: UIButton) {
         if cardsDB[suitData]!.contains(cardsValue[sender.tag - 1]) {
             sender.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.8)
-            cardsDB[suitData]!.append(cardsValue[sender.tag - 1])
-            //TODO: -Something that can delate the element
+            var i = 0
+            for card in cardsDB[suitData]! {
+                if card == cardsValue[sender.tag - 1] {
+                    cardsDB[suitData]!.remove(at: i)
+                }
+                i += 1
+            }
         } else {
             sender.backgroundColor = UIColor.white
             cardsDB[suitData]!.append(cardsValue[sender.tag - 1])

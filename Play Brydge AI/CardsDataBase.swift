@@ -16,3 +16,5 @@ var cardsDB = [
     "Diamonds": [String](),
     "Clubs": [String]()
 ]
+
+var myCards = cardsDB["Hearts"]! + cardsDB["Spades"]! + cardsDB["Diamonds"]! + cardsDB["Clubs"]!
