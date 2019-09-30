@@ -41,6 +41,60 @@ class EnterCardsViewController: UIViewController {
         escButton.layer.cornerRadius = 25
         suitLabel.text = suitsDB[suitData]!["view"]
         infoLabel.text = "Podaj \(suitsDB[suitData]!["pl"]!)"
+        
+        checkIfExistingInDB()
+    }
+    
+    func checkIfExistingInDB() {
+        card1Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card2Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card3Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card4Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card5Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card6Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card7Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card8Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card9Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card10Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card11Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card12Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        card13Button.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.80)
+        for card in cardsDB[suitData]! {
+            switch card {
+            case "2":
+                updateCardUI(button: card1Button, existInDB: cardsDB[suitData]!.contains("2"))
+            case "3":
+                updateCardUI(button: card2Button, existInDB: cardsDB[suitData]!.contains("3"))
+            case "4":
+                updateCardUI(button: card3Button, existInDB: cardsDB[suitData]!.contains("4"))
+            case "5":
+                updateCardUI(button: card4Button, existInDB: cardsDB[suitData]!.contains("5"))
+            case "6":
+                updateCardUI(button: card5Button, existInDB: cardsDB[suitData]!.contains("6"))
+            case "7":
+                updateCardUI(button: card6Button, existInDB: cardsDB[suitData]!.contains("7"))
+            case "8":
+                updateCardUI(button: card7Button, existInDB: cardsDB[suitData]!.contains("8"))
+            case "9":
+                updateCardUI(button: card8Button, existInDB: cardsDB[suitData]!.contains("9"))
+            case "10":
+                updateCardUI(button: card9Button, existInDB: cardsDB[suitData]!.contains("10"))
+            case "J":
+                updateCardUI(button: card10Button, existInDB: cardsDB[suitData]!.contains("J"))
+            case "Q":
+                updateCardUI(button: card11Button, existInDB: cardsDB[suitData]!.contains("Q"))
+            case "K":
+                updateCardUI(button: card12Button, existInDB: cardsDB[suitData]!.contains("K"))
+            default:
+                updateCardUI(button: card13Button, existInDB: cardsDB[suitData]!.contains("A"))
+            }
+        }
+    }
+    
+    func updateCardUI(button : UIButton, existInDB : Bool) {
+        if existInDB {
+            button.backgroundColor = UIColor.white
+        }
     }
     
     @IBAction func escButton(_ sender: Any) {
@@ -51,7 +105,6 @@ class EnterCardsViewController: UIViewController {
     
     @IBAction func cardsBotton(_ sender: UIButton) {
         if cardsDB[suitData]!.contains(cardsValue[sender.tag - 1]) {
-            sender.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.8)
             var i = 0
             for card in cardsDB[suitData]! {
                 if card == cardsValue[sender.tag - 1] {
@@ -60,10 +113,9 @@ class EnterCardsViewController: UIViewController {
                 i += 1
             }
         } else {
-            sender.backgroundColor = UIColor.white
             cardsDB[suitData]!.append(cardsValue[sender.tag - 1])
         }
-        
+        checkIfExistingInDB()
     }
     
     
